@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="public_base::layout(${title},~{::section})">
+<body>
+	<section>
+		
+		<div class="base-container base-container-register">
+			<!-- code for alert -->
+			<div class="alert-box">
+				<div class="row">
+					<div class="col-4 offset-4">
+						<div th:if="${session.msg}!=null" th:text="${session.msg.message}"
+							class="alert alert-primary text-center" role="alert"></div>
+						<th:block th:text="${#session.removeAttribute('msg')}"></th:block>
+					</div>
+				</div>
+			</div>
+			<!-- alert code ends here -->
+			
+		
+		
+            <div class="row dash">
+                <div class="col-6 offset-3">
+                    <div class="card-body card-login">
+                        <h2 class="card-title">We are excited to manage your contacts</h2>
+                        <h4 class="card-subtitle mb-2 text-muted text-center">
+                            just a few things about you and we are set
+                        </h4>
+
+                        <br>	
+                        
+                        <form th:action="@{/registerUser}" method="post" th:object="${user}">
+                        
+                            <div class="form-floating mb-3">
+                                  <input type="text" class="form-control form-control-sm" name = "name" id="floatingInput" placeholder="name">
+                                  <label for="floatingInput">Name</label>
+                            </div>
+                            <p th:if="${#fields.hasErrors('name')}" th:each="e:${#fields.errors('name')}" th:text="${e}"></p>
+                            
+                            <div class="form-floating mb-3">
+                                  <input type="email" class="form-control form-control-sm" name = "email" id="floatingInput" placeholder="name@example.com">
+                                  <label for="floatingInput">Email address</label>
+                            </div>
+                            <p th:if="${#fields.hasErrors('email')}" th:each="e:${#fields.errors('email')}" th:text="${e}"></p>
+                            
+                            <div class="form-floating mb-3">
+                                  <input type="password" class="form-control form-control-sm" name ="password" id="floatingPassword" placeholder="Password">
+                                  <label for="floatingPassword">Password</label>
+                            </div>
+                            
+                            <div class="form-floating mb-3">
+                                  <input type="text" class="form-control" name="about" id="floatingInput" placeholder="description">
+                                  <label for="floatingInput">A few words about yourself</label>
+                            </div>
+                            
+                            <label style="font-weight:bold">Select your best looking picture below </label>
+                            <div class="input-group mb-3">
+                                  <input type="file" class="form-control" name = "file" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">		
+                            </div>
+                            <div class="row">
+                               <div class="col-1 offset-5">
+                                    <input type ="submit" value="Ready" class="btn btn-small btn-custom btn-custom-register">                               
+                               </div> 
+                            </div>
+                            <span><a href="/login" style="color:white">Already registered? Login Here</a></span>
+                        </form> <!--form ends here-->
+                    </div> <!--card body ends here-->
+                </div> <!--div for col ends here-->
+        </div><!--div for row ends here-->
+     </div>  <!--div for base container ends here-->  
+		
+   </section>
+	
+</body>
+</html>

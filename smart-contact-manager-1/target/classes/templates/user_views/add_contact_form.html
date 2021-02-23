@@ -1,0 +1,96 @@
+<!doctype html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="user_views/user_base::layout(${title},~{::section})">
+
+<section>
+
+
+	<div class="base-container base-container-add-contact">
+		
+			<!-- code for alert -->
+			<div class="alert-box">
+				<div class="row">
+					<div class="col-4 offset-4">
+						<div th:if="${session.msg}!=null" th:text="${session.msg.message}"
+							class="alert alert-primary text-center" role="alert"></div>
+						<th:block th:text="${#session.removeAttribute('msg')}"></th:block>
+					</div>
+				</div>
+			</div>
+			<!-- alert code ends here -->
+			
+		<!-- card -->
+		<div class="row">
+			<div class="card col-6 offset-3 card-custom card-contact-form"
+				style="width: 30rem;">
+				<div class="card-body">
+					<h3 class="card-title text-center">ADD A CONTACT</h3>
+					<h4 class="card-subtitle mb-2 text-muted text-center">
+						Takes less than a minute
+					</h4>
+	
+	
+					<!-- add contact form begins -->
+					<form th:action="@{/user/addContact}" method="post" th:object="${contact}">
+	
+						<!-- name -->
+						<div class="form-floating mb-3">
+							<input type="text" class="form-control form-control-sm"
+								name="name" id="floatingInput" placeholder="name"> 
+							<label for="floatingInput">Name</label>
+						</div>
+						<!-- <p th:each="e:${#fields.errors('name')}" th:text="${e}"></p> -->
+	
+						<!-- email -->
+						<div class="form-floating mb-3">
+							<input type="email" class="form-control form-control-sm"
+								name="email" id="floatingInput" placeholder="name@example.com">
+							<label for="floatingInput">Email address</label>
+						</div>
+						<!-- <p th:each="e:${#fields.errors('email')}" th:text="${e}"></p> -->
+	
+						<!-- phone number -->
+						<div class="form-floating mb-3">
+							<input type="text" class="form-control" name="phoneNo"
+								id="floatingInput" placeholder="description"> 
+							<label for="floatingInput">Phone Number</label>
+						</div>
+	
+						<!-- work -->
+						<div class="form-floating mb-3">
+							<input type="text" class="form-control" name="work"
+								id="floatingInput" placeholder="description">
+							<label for="floatingInput">Work</label>
+						</div>
+	
+	
+						<!-- nickname -->
+						<div class="form-floating mb-3">
+							<input type="text" class="form-control" name="nickname"
+								id="floatingInput" placeholder="description"> <label
+								for="floatingInput">Nickname</label>
+						</div>
+	
+						<!-- image/avatar -->
+						<label style="font-weight: bold">Set contact's avatar </label>
+						<div class="input-group mb-3">
+							<input type="file" class="form-control" name="file"
+								id="inputGroupFile04" aria-describedby="inputGroupFileAddon04"
+								aria-label="Upload">
+						</div>
+	
+						<input type="submit" value="Add contact"
+							class="btn-custom btn-add-contact">
+	
+					</form>
+					<!-- add contact form ends -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section>
+
+
+</html>

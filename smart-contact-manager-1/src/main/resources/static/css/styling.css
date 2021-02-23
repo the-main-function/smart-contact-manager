@@ -1,0 +1,135 @@
+.navbar-custom { 
+    background-color:whitesmoke; 
+}
+
+.base-container{
+    background-image:linear-gradient(to right,#57BC90,#77C9D4);
+    background-size:cover;
+}
+.base-container-home{
+    padding-top: 15%;
+    color:white;
+    height:100vh;
+}
+
+.base-container-register{
+    height: 100%;
+}
+
+.base-container-login{
+    padding-top:5%;
+    height:75vh;
+    width:80%;
+    margin-left:11%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.btn-custom{
+    background-color:whitesmoke; 
+    color:#015249; 
+}
+
+.btn-custom-home{
+    font-size:30px; 
+}
+
+.btn-custom-register{
+    font-size:25px; 
+}
+
+.btn-space{
+    margin-right:2%;
+}
+
+.card-title{
+    color:#FFFFFF;
+}
+
+.card-login{
+    padding-top:3%;
+}
+
+.footer{
+    padding-top:1%;
+    background-color:whitesmoke;
+}
+
+.sidebar-container{
+    background-color:whitesmoke;
+    margin-top:2%;
+    float:left;
+    width:15%;
+    height:100%;
+}
+
+.base-container-dashboard{
+    height:75vh;
+    margin-left:20%;
+    margin-top:1%;
+    margin-bottom: 1%;
+    width:70%;
+    color:white;
+    padding-top: 1.5%;
+}
+
+.dashboard-button-container{
+    margin-top:6%;
+    height:100%;
+}
+
+.btn-dashboard{
+    height:15%;
+    width:80%;
+    margin-bottom:2%;
+    margin-left:10%;
+}
+
+.card-custom{
+    background-image: linear-gradient(to left,#77C9D4,#57BC90);
+    border-color: whitesmoke;
+ }
+ 
+ .card-contact-form{
+	margin-bottom: 5%;
+}
+
+ .base-container-add-contact{
+    height: 100%;
+    margin-left:20%;
+    margin-top:1%;
+    margin-bottom:1%;
+    width:70%;
+    padding-top:1.5%;
+}
+
+.btn-add-contact{
+    margin-bottom:3%;
+	margin-left:35%;
+	font-size:1.4rem;
+}
+
+.btn-update-contact{
+    margin-bottom:3%;
+	margin-left:30%;
+	font-size:1.4rem;
+}
+
+.base-container-contact-list{
+	height: 75vh;
+    margin-left:20%;
+    margin-top:1%;
+    margin-bottom:1%;
+    width:70%;
+    padding-top:1.5%;
+}
+
+.card-contact-list{
+	margin-left:5%;
+	margin-bottom:2%;	
+}
+
+.card-update-contact{
+	margin-top : 2%;
+	margin-bottom: 5%;
+}

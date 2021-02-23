@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="user_views/user_base::layout(title,~{::section})">
+
+	<section>
+		
+        <div class="base-container base-container-dashboard">
+            <h2 class="text-center" th:text="'Hellu,'+${name}"></h2>
+            <div class="dashboard-button-container">
+                
+                    <a th:href="@{/user/addContactForm}">
+                    	<button class="btn-custom btn-dashboard">ADD CONTACTS</button>
+                    </a>
+                
+                    <button class="btn-custom btn-dashboard">FREQUENT CONTACTS</button>
+                
+                    <button class="btn-custom btn-dashboard">SEARCH</button>
+                
+            </div>
+        </div>
+        
+	</section>
+
+</html>

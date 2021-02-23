@@ -1,0 +1,20 @@
+<html lang="en" xmlns:th="http//www.thymeleaf.org" th:replace="public_base::layout(${title},~{::section})">
+	<section>
+		<div class="base-container base-container-home">
+            <div class="row h-100">
+                <div class="col-md-8 offset-2 text-center">
+                    <h1 id="main-title">SMART CONTACT MANAGER</h1>
+                    <h3>From Personal to Business - we got it all covered</h3>
+                    <h2>Your contacts are safe with us</h2>
+                    <br> 
+                    <a th:href="@{/user/dashboard}">
+                        <button class="btn btn-lg btn-custom btn-custom-home btn-space">SIGN IN</button>
+                    </a> 
+                    <a th:href="@{/signup}">
+                        <button class="btn btn-lg btn-custom btn-custom-home">REGISTER</button>
+                    </a>	
+                </div>
+            </div>
+        </div>
+	</section>
+</html>
